@@ -1,11 +1,13 @@
-// const jokeElenet = document.getElementById("joke");
-// const btnjoke = document.getElementById("jokebtn");
+const jokeElenet = document.getElementById("joke");
 
-
-// btnjoke.addEventListener("click", jokeGenerator);
 
 function jokeGenerator(){
-    const jokes = fetch("https://api.jokes.one");
-
+    const jokes = fetch("https://api.jokes.one", {
+        mode: 'no-cors',
+        method: "post",
+        headers: {
+             "Content-Type": "application/json"
+        }
+    })
+    console.log(jokes);
 }
-jokeGenerator();
