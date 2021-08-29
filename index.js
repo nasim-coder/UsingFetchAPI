@@ -11,9 +11,8 @@ function jokeGenerator() {
       return response.json();
     }).then(function(data) {
       const joke = data.joke;
-      console.log(joke);
       jokeElemenet.innerHTML = joke;
-  console.log(joke);  
+      console.log(joke);
     }).catch(function(error) {
       console.log(error);
     });
